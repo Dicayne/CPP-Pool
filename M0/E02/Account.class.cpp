@@ -6,13 +6,14 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 11:18:54 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/12 01:21:36 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/01/12 01:35:57 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.class.hpp"
 #include <iostream>
 #include <iomanip>
+#include <ctime>
 
 int		Account::_nbAccounts = 0;
 int		Account::_totalAmount = 0;
@@ -97,9 +98,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 
 int		Account::checkAmount(void)const
 {
-	if (this->_amount > 0)
-		return (1);
-	return (0);
+	return (this->_amount);
 }
 
 void	Account::displayStatus( void ) const

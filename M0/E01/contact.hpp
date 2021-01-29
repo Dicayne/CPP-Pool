@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 13:52:03 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/08 16:56:36 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/01/13 10:31:58 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class contact
 public:
 
 	contact();
+	~contact();
 	void add();
 	void display_contact();
 	int display_presentation(int i);

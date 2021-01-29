@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 13:51:38 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/08 18:28:31 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/01/13 10:31:44 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 contact::contact(void)
 {
+	std::cout << "CONTACT CREE" << std::endl;
 }
 
+contact::~contact(void)
+{
+	std::cout << "CONTACT Detruit" << std::endl;
+}
 int contact::display_presentation(int i)
 {
 	if (i <= 8 && is_used == true)
