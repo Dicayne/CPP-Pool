@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:33:27 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:52:19 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:32:35 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int			FragTrap::vaulthunter_dot_exe(std::string const & target)
 	{
 		std::cout << "FragTrap <" << this->_name << "> lunch VaultHunter.exe on <" << target << ">: \"Here we go for my vaulthunter.exe !\"" << std::endl;
 		this->_energy -= 25;
-		auto gen = std::mt19937{std::random_device{}()};
-		auto dist = std::uniform_int_distribution<int>{0, 4};
-		int i = dist(gen);
+
+		int i = (rand() % 5);
+
 		if (i == 0)
 			return (this->hyperion_punch());
 		else if (i == 1)
@@ -121,4 +121,11 @@ int				FragTrap::fatal_error( void )
 {
 	std::cout << "FragTrap <" << this->_name << ">: \"Ha ha haaa, taste this fatal error !!\"" << std::endl;
 	return (80);
+}
+
+std::ostream &		operator<<( std::ostream & o, FragTrap const & i)
+{
+	o << "Hi i'm " << i.get_name() << ", i've " << i.get_hp() << "HP and " << i.get_energy() << " Energy points, Prepare to battle!!" << std::endl;
+
+	return o;
 }

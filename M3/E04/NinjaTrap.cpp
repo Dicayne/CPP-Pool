@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 15:45:52 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/28 17:15:47 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:34:17 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,11 @@ int			NinjaTrap::meleeAttack(std::string const & target) const
 {
 	std::cout << "NinjaTrap <" << this->_name << "> attack <" << target << "> in melee: \"Take my shadow punch!\"" << std::endl;
 	return (this->_melee_attack_dmg);
+}
+
+std::ostream &		operator<<( std::ostream & o, NinjaTrap const & i)
+{
+	o << "Hi i'm " << i.get_name() << ", i've " << i.get_hp() << "HP and " << i.get_energy() << " Energy points, Prepare to battle!!" << std::endl;
+
+	return o;
 }

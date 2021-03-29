@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 14:49:19 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:59:35 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:31:38 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <sstream>
-#include <random>
+#include <stdlib.h>
 
 class ClapTrap
 {

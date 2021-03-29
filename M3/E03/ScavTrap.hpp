@@ -6,15 +6,15 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 12:21:13 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:59:16 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:28:02 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 #include <iostream>
-#include <random>
 #include "ClapTrap.hpp"
+
 class ScavTrap : public ClapTrap
 {
 

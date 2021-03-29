@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 15:45:52 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:58:23 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:34:11 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,11 @@ void		NinjaTrap::ninjaShoebox( ScavTrap const & target )
 void		NinjaTrap::ninjaShoebox( NinjaTrap const & target )
 {
 	std::cout << "NinjaTrap <" << this->_name << "> : Provoke NinjaTrap <" << target.get_name() << ">, into a ninjustsu fight !" << std::endl;
+}
+
+std::ostream &		operator<<( std::ostream & o, NinjaTrap const & i)
+{
+	o << "Hi i'm " << i.get_name() << ", i've " << i.get_hp() << "HP and " << i.get_energy() << " Energy points, Prepare to battle!!" << std::endl;
+
+	return o;
 }

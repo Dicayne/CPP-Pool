@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:33:20 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/22 11:56:32 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:13:55 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 	FragTrap *clap(new FragTrap("Clap"));
 	FragTrap *trap(new FragTrap("Trap"));
 
@@ -22,14 +23,12 @@ int main()
 	trap->takeDamage(clap->rangedAttack(trap->get_name()));
 	clap->takeDamage(trap->rangedAttack(clap->get_name()));
 	std::cout << std::endl << "Then they present themselves: " << std::endl;
-	clap->identify();
-	trap->identify();
+	std::cout << *clap << *trap;
 	std::cout << std::endl;
+
 	while (trap->get_hp() > 0 && clap->get_hp() > 0)
 	{
-		auto gen = std::mt19937{std::random_device{}()};
-		auto dist = std::uniform_int_distribution<int>{1, 2};
-		int i = dist(gen);
+		int i = rand() % 2;
 		if (i == 1)
 		{
 			trap->takeDamage(clap->meleeAttack(trap->get_name()));

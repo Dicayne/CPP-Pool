@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:33:20 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/27 15:25:15 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:30:32 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 	FragTrap *clap(new FragTrap("Frag"));
 	ScavTrap *scav(new ScavTrap("Scav"));
 	NinjaTrap *ninja_c(new NinjaTrap("Ninja_clap"));
@@ -23,6 +24,7 @@ int main()
 	ninja_c->ninjaShoebox(*clap);
 	ninja_c->ninjaShoebox(*scav);
 	ninja_c->ninjaShoebox(*ninja_t);
+
 	std::cout << std::endl;
 
 	delete clap;

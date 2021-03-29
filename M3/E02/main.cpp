@@ -6,15 +6,17 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:33:20 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/26 15:12:45 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:26:05 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include <stdlib.h>
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 	FragTrap *clap(new FragTrap("Clap"));
 	ScavTrap *scav(new ScavTrap("Scav"));
 

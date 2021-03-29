@@ -6,14 +6,14 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:33:24 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:50:50 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:20:20 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 #include <iostream>
-#include <random>
+#include <stdlib.h>
 
 class FragTrap
 {

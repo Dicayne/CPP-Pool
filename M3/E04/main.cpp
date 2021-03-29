@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 10:33:20 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/28 17:36:32 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:36:40 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 	SuperTrap *super(new SuperTrap("Super"));
 	FragTrap *frag(new FragTrap("Frag"));
 

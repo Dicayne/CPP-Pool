@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 15:27:50 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 13:03:34 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:36:07 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,9 @@ void		SuperTrap::presentation() const
 	std::cout << "-Ranged DMG :" << this->_range_attack_dmg << std::endl << "-Armor :" << this->_armor << std::endl;
 }
 
+std::ostream &		operator<<( std::ostream & o, SuperTrap const & i)
+{
+	o << "Hi i'm " << i.get_name() << ", i've " << i.get_hp() << "HP and " << i.get_energy() << " Energy points, Prepare to battle!!" << std::endl;
+
+	return o;
+}

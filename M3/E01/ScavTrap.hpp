@@ -6,14 +6,14 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 12:21:13 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:51:28 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:20:16 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 #include <iostream>
-#include <random>
+#include <stdlib.h>
 
 class ScavTrap
 {

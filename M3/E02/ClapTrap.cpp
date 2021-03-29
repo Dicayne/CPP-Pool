@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 14:49:16 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:56:10 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:33:20 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,11 @@ void		ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout << "ClapTrap <" << this->_name << ">: \"Oh i'm already full life !\"" << std::endl;
+}
+
+std::ostream &		operator<<( std::ostream & o, ClapTrap const & i)
+{
+	o << "Hi i'm " << i.get_name() << ", i've " << i.get_hp() << "HP and " << i.get_energy() << " Energy points, Prepare to battle!!" << std::endl;
+
+	return o;
 }

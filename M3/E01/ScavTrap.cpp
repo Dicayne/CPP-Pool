@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 12:21:10 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/01/29 12:51:14 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/02/15 13:22:29 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,10 +121,7 @@ void		ScavTrap::beRepaired(unsigned int amount)
 void		ScavTrap::challengeNewComer(std::string const & target)
 {
 		std::cout << "ScavTrap <" << this->_name << "> challenged <" << target << ">: \"Here we go for the challenge !!!\"" << std::endl;
-		auto gen = std::mt19937{std::random_device{}()};
-		auto dist = std::uniform_int_distribution<int>{0, 3};
-		int i = dist(gen);
-		i = 3;
+		int i = (rand() % 4);
 		if (i == 0)
 			this->brute_force();
 		else if (i == 1)
@@ -139,9 +136,7 @@ void		ScavTrap::challengeNewComer(std::string const & target)
 void			ScavTrap::brute_force( void )
 {
 	std::cout << "ScavTrap <" << this->_name << ">: \"This challenge test your pure strength, hit that !!!\"" << std::endl << std::endl;
-	auto gen = std::mt19937{std::random_device{}()};
-	auto dist = std::uniform_int_distribution<int>{0, 100};
-	int i = dist(gen);
+	int i = (rand() % 101);
 
 	std::cout << "Brute Force machine: GLING . GLING .. GLING ... POW : " << i << " points!" << std::endl;
 	if (i >= 0 && i <= 20)
@@ -159,10 +154,8 @@ void			ScavTrap::brute_force( void )
 
 void			ScavTrap::rock_paper_scisor( void )
 {
-	auto gen = std::mt19937{std::random_device{}()};
-	auto dist = std::uniform_int_distribution<int>{0, 2};
-	int a = dist(gen);
-	int b = dist(gen);
+	int a = (rand() % 3);
+	int b = (rand() % 3);
 	std::string rps[3] = {"Rock" , "Paper", "Scisors"};
 	std::string scav = rps[a];
 	std::string chal = rps[b];
@@ -180,9 +173,7 @@ void			ScavTrap::rock_paper_scisor( void )
 void			ScavTrap::apnea_challenge( void )
 {
 	std::cout << "ScavTrap <" << this->_name << ">: \"Prepare yourself for an apnea challenge! TAKE A BIG BREATH\"" << std::endl << std::endl;
-	auto gen = std::mt19937{std::random_device{}()};
-	auto dist = std::uniform_int_distribution<int>{0, 60};
-	int i = dist(gen);
+	int i = (rand() % 61);
 
 	if (i >= 0 && i <= 10)
 		std::cout << "ScavTrap <" << this->_name << ">: \"" << i << " seconds, tss ridiculous ...\"" << std::endl;
@@ -199,9 +190,7 @@ void			ScavTrap::apnea_challenge( void )
 void			ScavTrap::russian_roulette( void )
 {
 	std::cout << "ScavTrap <" << this->_name << ">: \"Are you ready for the most dangerous challenge???\"" << std::endl << std::endl;
-	auto gen = std::mt19937{std::random_device{}()};
-	auto dist = std::uniform_int_distribution<int>{1, 6};
-	int i = dist(gen);
+	int i = (rand() % 6);
 
 	std::cout << "Challenger take the gun, he's trembling a lot, he take a breath ... ";
 
@@ -210,4 +199,11 @@ void			ScavTrap::russian_roulette( void )
 	else
 		std::cout << "CLICK!!!" << std::endl << "ScavTrap <" << this->_name << ">: \"You are really brave!!!\"" << std::endl;
 	return ;
+}
+
+std::ostream &		operator<<( std::ostream & o, ScavTrap const & i)
+{
+	o << "Hi i'm " << i.get_name() << ", i've " << i.get_hp() << "HP and " << i.get_energy() << " Energy points, Prepare to battle!!" << std::endl;
+
+	return o;
 }
