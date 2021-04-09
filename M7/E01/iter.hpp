@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 17:01:31 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/03/15 15:16:53 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/04/09 12:44:10 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 
 template< typename T >
-void	iter(T *add, size_t size, void (&func)( T & ))
+void	iter(T *add, size_t size, void (*func)( T & ))
 {
 	int i(0);
 

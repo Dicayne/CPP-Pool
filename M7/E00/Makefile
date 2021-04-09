@@ -6,7 +6,7 @@
 #    By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/12 15:05:29 by vmoreau           #+#    #+#              #
-#    Updated: 2021/04/09 12:16:05 by vmoreau          ###   ########.fr        #
+#    Updated: 2021/04/09 12:49:54 by vmoreau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS = main2.cpp
 
 NAME = function
 
-CFLAGS = -Wall -Wextra -Werror --std=c++98 -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror --std=c++98
 
 OBJS = $(SRCS:%.cpp=%.o)
 
