@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 17:12:28 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/02/09 14:54:35 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/04/01 13:29:31 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int main()
 	toto->list_materia();
 	toto->use(0, *bob);
 	toto->list_materia();
-	toto->use(0, *bob);
+	toto->use(2, *bob);
 	toto->list_materia();
 	std::cout << std::endl;
 

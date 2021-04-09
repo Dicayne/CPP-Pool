@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 17:12:25 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/02/09 14:43:32 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/04/01 13:25:51 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Character::Character ( Character const & n )
 
 Character & Character::operator=( Character const & rhs )
 {
-	// std::cout << "Character assignation called" << std::endl;
+	std::cout << "Character assignation called" << std::endl;
 	int i(0);
 
 	while (i < this->_nb_materia)
@@ -44,6 +44,8 @@ Character & Character::operator=( Character const & rhs )
 		this->_inv[i] = rhs._inv[i]->clone();
 		i++;
 	}
+
+	this->list_materia();
 	return (*this);
 }
 
