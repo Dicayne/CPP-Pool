@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 14:55:30 by vmoreau           #+#    #+#             */
-/*   Updated: 2021/03/29 12:41:33 by vmoreau          ###   ########.fr       */
+/*   Updated: 2021/04/12 01:14:24 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ int main()
 	std::cout << "\033[4mAdd Value to the MutantStack by using PUSH\033[0m" << std::endl;
 	mstack.push(14);
 	mstack.push(42);
+	mstack.push(21);
 
-	std::cout << "Size of the stack after PUSH 2 value: " << mstack.size() << std::endl << std::endl;
+	std::cout << "Size of the stack after PUSH 3 value: " << mstack.size() << std::endl << std::endl;
 
 	std::cout << "\033[4mErase Value to the MutantStack by using POP\033[0m" << std::endl;
 	mstack.pop();
